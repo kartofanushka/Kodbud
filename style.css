@@ -1,0 +1,10 @@
+body {border: #f0f8ff;}
+h1{font-style: italic; padding: 2px; padding-left: 10px;}
+h2{ color: gray;font-style: italic; padding-left: 10px; text-align: left;}
+img  {width: 700; border-radius: 20px;border: double; border-color: grey; box-sizing: 2; padding: 10px;}
+p {color: rgb(rgb(44, 44, 44));
+font-size: 14px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+span{font-weight: bolder; margin: 10px;}
+.wiki {height: 100px; width: 100;}
