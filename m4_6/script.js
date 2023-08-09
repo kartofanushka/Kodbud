@@ -7,3 +7,10 @@ function add_1() {
    count+=1
    counter.textContent=count
 }
+let saved = document.querySelector(".saved")
+function save(){
+   let saveStr = count + "--"
+   saved.textContent += saveStr
+   count=0
+   counter.textContent=count
+}
