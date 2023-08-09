@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%load static%}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{%static 'css/fontello.css' %}">
+  <title>{%block title %}{% endblock %}</title>
+</head>
+
+<body>
+{% block navbar%}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'topsellers' %}">Топ продавцов</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'advpost' %}">Разместить объявление</a>
+            </li>
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Профиль
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'register' %}">Регистрация</a>
+                <li><a class="dropdown-item" href="{% url 'login' %}">Войти</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'profile'%}">Профиль</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+    </nav>
+{% endblock%}
+    {%block content%}
+    {%endblock%}
+    {%block footer%}
+    <footer style="padding: 100px;" class="bg-secondary bg-body-tertiary">
+        <nav class="navbar navbar-expand-sm">
+          <a class="navbar-brand" href="#">Добавьте</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                  aria-label="Toggle navigation"></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-current="page">сюда<span
+                        class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">что</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">хотите</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#">например</a>
+                  <a class="dropdown-item" href="#">ссылки на социальные сети</a>
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <input class="form-control me-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </footer>
+      {%endblock%}
+    {%block scripts%}
+<script src="{%static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    {%endblock%}
+
+</body>
+</html>
