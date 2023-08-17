@@ -4,7 +4,9 @@ from .models import Advertisement
 # Register your models here.
 
 class Adv_admin(admin.ModelAdmin):
+
     list_display = ["id",  "user","auction", "title", "teaser", "price", "cteated_date", "updated_date", "image_d"]
+
     list_display_links = [ "title"]
     list_filter = ["updated_at", "title"]
     list_per_page = 50
@@ -18,6 +20,7 @@ class Adv_admin(admin.ModelAdmin):
         ('Finance', {
             "fields":("price", "auction"),
             "classes":["collapse"] # FIXED "classes" // doesn't work Fieldset.__init__() got an unexpected keyword argument 'collapse'
+
         }))
     # function name same as in action
     @admin.action(description="Disable auction option")
