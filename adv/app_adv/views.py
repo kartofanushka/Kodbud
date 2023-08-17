@@ -1,11 +1,16 @@
 from django.shortcuts import render
+from .models import Advertisement
 
 # Create your views here.
 from django.http import HttpResponse
 
 def example(request):
     # return HttpResponse("hi welcome")
-    return render(request, 'index.html')
+    advertisements= Advertisement.objects.all()
+    
+    # print(advertisements)
+    context = {"name": "exampleeee", "name1": "exampleeee1", "name3":["dfdf1", "sdfsdf2", ["dasa0","sada1"]], "advertisements":advertisements}
+    return render(request, 'index.html', context)
 
 def top_sellers(request):
     return render(request, 'topsellers.html')
@@ -20,6 +25,11 @@ def register(request):
 def advpost(request):
     return render(request,'advpost.html')
 def adv(request):
-    return render(request,'adv.html')
+    advertisements= Advertisement.objects.all()
+    
+    # print(advertisements)
+    context = {"name": "exampleeee", "name1": "exampleeee1", "name3":["dfdf1", "sdfsdf2", ["dasa0","sada1"]], "advertisements":advertisements}
+    print (context)
+    return render(request,'adv.html',context)
 
 

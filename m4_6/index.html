@@ -9,12 +9,35 @@
 <body>
     <div class="container">
     <h1>counter</h1>
+
     <h2 class="counter">0</h2>
     <button class="add" onclick="add_1()">add 1</button>
+
     <h2 class="saved">0</h2>
     <button class="save" onclick="save()">save</button>
+   
 
+
+<h2 class="counter2">0</h2>
+    <button class="add" onclick="add_2()">add 2</button>
+    
+<!-- <h2 class="rand_bc">0</h2> -->
+<button class="rand_but" onclick="teleport()" style="position: absolute;">  Teleport  </button>
+
+<p id="demo">p demo</p>
 </div>
+<a href="1.html">1</a>
+
     <script src="script.js"></script>
+    <script>
+
+        x = 5; // Assign 5 to x
+        
+        elem = document.getElementById("demo"); // Find an element 
+        elem.innerHTML = x;           // Display x in the element
+        
+        var x; // Declare x
+        
+    </script>
 </body>
 </html>
