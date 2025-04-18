@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  {%load static%}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+ 
+  <title>{%block title %}Advertisement{% endblock %}</title>
+</head>
+<body>
+    {%block nav %}{%endblock%}
+    {% block content%}
+    
+    <div class="col">
+      {% comment %} <h2>{{ advertisements.3.title }}<br>{{name}}  {{name1}} {{name3.2.1}}</h2>   {% endcomment %}
+    </div>
+  <div class="container" style="margin: 50px;">
+    <div class="display-2">
+      <span class="badge bg-secondary">Объявление пользователя "username"</span>
+    </div>
+  </div>
+  <div class="col offset-2">
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="#" class="nav-link">
+            <img src="{%static 'img/card_001.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+          </a>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="#" class="nav-link"><strong>{{ advertisements.3.title }}</strong></a>
+            </h5>
+            <p class="card-text">
+              {{ advertisements }}
+            </p>
+            <span>Автор: "username"</span>
+            <p class="card-text"><small class="text-muted">Размещено: "дата"</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    {%endblock%}
+</body>
+</html>
